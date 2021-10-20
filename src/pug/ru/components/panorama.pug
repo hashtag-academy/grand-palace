@@ -1,0 +1,14 @@
+section.panorama
+  .panorama-slider
+    .panorama-slider__header
+      h2.panorama-slider__title Панорама города
+      .panorama-slider__switcher
+        span.active
+          +svg('halfmoon')
+        span
+          +svg('sun')
+    .panorama-slider__items
+      .panorama-slider__item.fade.active
+        img.night(src="../img/panoramanight.jpg" alt="Grand Palace - панорама на город Хмельницкий ночью")
+      .panorama-slider__item.fade
+        img.day(src="../img/panoramaday.jpg" alt="Grand Palace - панорама на город Хмельницкий днем")

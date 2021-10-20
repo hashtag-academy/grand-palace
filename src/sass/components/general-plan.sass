@@ -1,0 +1,235 @@
+.plan
+  font-size: 1.6rem
+  +media(830)
+    @include adaptiv-prop('font-size', 24, 12, 0)
+.plan-bg
+  position: relative
+
+
+.plan__title
+  display: inline-block
+
+.plan__visual
+  flex: 1 1 100%
+  max-width: 100%
+  padding: 0 1.5%
+  align-self: center
+  +media(830)
+    flex: 1 1 75%
+    max-width: 75%
+  +media(1180)
+    flex: 1 1 54%
+    max-width: 54%
+    padding: 0
+    align-self: center
+  &::before
+    content: ''
+    position: absolute
+    top: 1%
+    left: 0
+    width: 100%
+    height: 98%
+    background: linear-gradient(rgba(243, 236, 226, 0.75)), url(../img/general-plan-bg.jpg) center/cover no-repeat
+    filter: blur(2px)
+    z-index: -1
+
+.plan-visual__img
+  position: relative
+  padding-bottom: 825 / 1136 * 100%
+  height: 0
+  overflow: hidden
+  +media(1080)
+    font-size: .83em
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+  .legend__location
+    li
+      position: absolute
+      transform-origin: left top
+      transform: translate(-50%, -100%)
+      top: 46.7%
+      left: 89%
+      cursor: pointer
+      transition: .5s ease
+      &:nth-child(2)
+        top: 68%
+        left: 29%
+      &:nth-child(3)
+        top: 81.7%
+        left: 48.7%
+      &:nth-child(4)
+        top: 50%
+        left: 85.3%
+      &:nth-child(5)
+        top: 46.9%
+        left: 73.7%
+      &:nth-child(6)
+        top: 20.9%
+        left: 89.4%
+      &:nth-child(7)
+        top: 46.9%
+        left: 32.4%
+      &:nth-child(8)
+        top: 20.5%
+        left: 20.3%
+      &:hover
+        // transform-origin: center bottom
+        transform: scale(1.2) translate(-50%, -100%)
+
+  .queue
+    li
+      position: absolute
+      font-family: 'Roboto Slab', Arial, serif
+      font-weight: 700
+      color: $fontColorSecond
+      @include adaptiv-prop('font-size', 40, 14, 0)
+      transform: translate(-100%, -100%)
+      &:nth-child(1)
+        top: 11.7%
+        left: 83.9%
+        +media(600)
+          left: 87.9%;
+      &:nth-child(2)
+        top: 45.4%
+        left: 49.8%
+      &:nth-child(3)
+        top: 15.2%
+        left: 15.9%
+  .street-left, .street-right
+    position: absolute
+    display: inline-block
+    color: $fontColorSecond
+    @include adaptiv-prop('font-size', 20, 2, 0)
+    white-space: nowrap
+  .street-left
+    top: 77.2%
+    left: 17.2%
+    transform-origin: right bottom
+    transform: translate(-100%, -100%) rotate(48.6deg)
+  .street-right
+    top: 67.1%
+    left: 84.4%
+    transform-origin: right bottom
+    transform: translate(-100%, -100%) rotate(-48.2deg)
+
+.legend-areas
+  flex: 1 1 100%
+  max-width: 100%
+  order: 1
+  +media(830)
+    flex: 1 1 25%
+    max-width: 25%
+  h3
+    margin-bottom: 20px
+    +media(830)
+      margin-bottom: 40px
+  ol
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin-bottom: 20px
+    li
+      width: 45%
+      +media(600)
+        width: 33%
+      // text-align: center
+      +media(830)
+        width: auto
+    +media(830)
+      display: block
+      margin-bottom: 0
+.legend-queue
+  flex: 1 1 100%
+  max-width: 100%
+  order: -1
+  li
+    text-align: center
+    &:not(:last-child)
+      margin-left: 10px
+    +media(420)
+      &:not(:last-child)
+        margin-left: 20px
+    +media(830)
+      &:not(:last-child)
+        margin-left: 0
+  +media(830)
+    flex: 1 1 75%
+    max-width: 75%
+    li
+      text-align: left
+  h3
+    margin-bottom: 10px
+.plan__legend
+  padding: 3.3% 1.5% 0
+  +media(1180)
+    flex: 1 1 23%
+    max-width: 23%
+    order: 0
+  +media(1630)
+    padding: 7.3% 1.5% 0
+  h3
+    font-family: 'Roboto Slab', Arial, serif
+    font-weight: 500
+    +media(1180)
+      margin-bottom: 40px
+    +media(1280)
+      margin-bottom: 53px
+  li
+    position: relative
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+    font-family: Roboto, Arial, sans-serif
+  .legend__text
+    padding-left: 20/24 * 1em
+
+.legend__text--uppercase
+  text-transform: uppercase
+
+.legend__queue
+  display: flex
+  justify-content: space-between
+  flex-direction: row-reverse
+  +media(1180)
+    display: block
+    justify-content: normal
+  .legend__text
+    padding: 0
+    +media(1180)
+      padding-left: 54/24 * 1em
+    .queue-number
+      margin-right: 5px
+      color: $maincolor
+      font-family: 'Roboto Slab', Arial, serif
+      font-weight: 700
+      @include adaptiv-prop('font-size', 30, 14, 0)
+      line-height: 1
+      +media(1180)
+        position: absolute
+        top: 0
+        left: 0
+
+.legend__icon
+  position: relative
+  align-self: flex-start
+  .icon-number
+    position: absolute
+    top: 50%
+    left: 50%
+    color: $fontColorSecond
+    font-size: .75em
+    transform: translate(-50%, -100%)
+    z-index: 2
+  svg
+    position: relative
+    left: 0
+    width: 34/28 * 1em
+    height: 56/28 * 1em
+    +media(720)
+      width: 34/24 * 1em
+      height: 56/24 * 1em

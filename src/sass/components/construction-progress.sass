@@ -1,0 +1,68 @@
+.construction-progress
+  .galery-wrapper
+    position: relative
+    padding: 25px 10%
+    overflow-x: hidden
+    &::after, &::before
+      content: ''
+      position: absolute
+      width: 12%
+      height: 100%
+      top: 0
+      z-index: 2
+    &::after
+      right: 0
+      background: linear-gradient(to right, transparent, rgb(243, 236, 226))
+    &::before
+      left: 0
+      background: linear-gradient(to left, transparent, rgb(243, 236, 226))
+    +media(540)
+      padding-left: 0
+      padding-right: 0
+      justify-content: space-between
+
+      overflow-x: visible
+      &::after, &::before
+        content: none
+
+  &__title
+    margin-bottom: 5px
+  &__galery
+    flex-wrap: nowrap
+    transition: .75s ease
+    +media(540)
+      flex-wrap: wrap
+  &__img
+    flex: 0 0 100%
+    max-width: 100%
+    height: 260px
+    margin-bottom: 25px
+    padding-left: 1.5%
+    padding-right: 1.5%
+    transition: .5s ease
+    align-self: center
+    cursor: pointer
+    // &:nth-child(n+4)
+    //   display: none
+    +media(540)
+      flex: 0 1 50%
+      max-width: 50%
+      &:nth-child(n+4)
+        display: block
+    +media(1024)
+      flex-basis: 25%
+      max-width: 25%
+    img
+      height: 100%
+      object-fit: cover
+      object-position: top
+    &:hover
+      transform: scale(1.1)
+  .btn-wrap
+    text-align: center
+  &__btn
+    padding: 15px 20px
+    font-size: 1.6rem
+    +media(768)
+      padding: 20px 40px
+      font-size: 1.8rem

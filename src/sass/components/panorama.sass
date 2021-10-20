@@ -1,0 +1,93 @@
+.panorama
+.panorama-slider
+  position: relative
+  height: 200px
+  +media(780)
+    height: 325px
+  &__items
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  &__item
+    display: none
+    height: 100%
+    img
+      height: 100%
+      object-fit: cover
+      &.night
+        object-position: 0 40%
+      &.day
+        object-position: 0 0%
+        +media(1080)
+          object-position: 0 12%
+    &.active
+      display: block
+    &.fade
+      animation: 1.5s fade
+  &__header
+    position: relative
+    // top: 6%
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    padding: 10px 0
+    z-index: 1
+    +media(540)
+      top: 6%
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(18, 13, 42, .25)
+      filter: blur(2px)
+    & > *
+      position: relative
+      z-index: 1
+  &__title
+    font: 400 2.2rem 'Roboto Slab', Arial, serif
+
+    // letter-spacing: 3px
+    color: $fontColorSecond
+    +media(780)
+      font-size: $fTitleSecond
+      letter-spacing: 3px
+  &__switcher
+    align-self: center;
+    margin-left: 30px
+    line-height: 0;
+    white-space: nowrap
+    cursor: pointer
+    span
+      position: relative
+      display: inline-block
+      padding: 13px 15px 12px
+      border: 3px solid $maincolor
+      border-right: none
+      +media(780)
+        padding: 13px 25px 12px
+      & + span
+        border: 3px solid $maincolor
+      svg
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        fill: $maincolor
+      &.active
+        color: $fontColorSecond
+        background-color: $maincolor
+        svg
+          fill: #fff
+
+@keyframes fade
+  0%
+    opacity: .4
+  100%
+    opacity: 1

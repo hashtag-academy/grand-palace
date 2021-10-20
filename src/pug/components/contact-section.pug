@@ -1,0 +1,43 @@
+section.contacts
+  .container
+    .contacts-wrapper
+      h2.contacts__title.title
+        span.head-line Наші
+        |  контакти
+      .contacts__items
+        .contacts-info__items.contacts__item
+          .contacts-info__item
+            h4 Телефони
+            .phone-list.contacts-info__phones
+              a.phone-link(href='tel:+380671321563')
+                +svg('phone')
+                |(067)&nbsp;132-15-63
+              a.phone-link(href='tel:+380671321563')
+                |(067)&nbsp;132-15-63
+          .contacts-info__item
+            h4 Пошта
+            .contacts-info__email
+              a.email-link(href='mailto:office@grandpalace.km.ua')
+                +svg('email')
+                |office@grandpalace.km.ua
+          .contacts-info__item
+            h4 Відділення продажу
+            .contacts-info__address
+              .address-text
+                .text-wrap
+                  span м.&nbsp;Хмельницький,&nbsp;
+                  span вул.&nbsp;Подільська,&nbsp;115
+                +svg('pin-footer')
+          .contacts-info__item
+            h4 Режим роботи
+            .contacts-info__working-hours
+              .working-hours-wrap
+                p Пн-пт 10:00 – 19:00
+                  +svg('clock')
+                p Сб 11:00 – 17:00, Нд&nbsp;вихідний
+
+        .contacts-map.contacts__item
+          .contacts-map__title
+            h4 Ми на карті
+          .contacts-map__img
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1543.0373354892847!2d26.98873072437564!3d49.42650709265669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473207e3c34fdb9b%3A0x90f6c3647d70162d!2zR1JBTkQgUEFMQUNFLCDQltCY0KLQm9Ce0JLQmNCZINCa0J7QnNCf0JvQldCa0KE!5e0!3m2!1sru!2sua!4v1629452712900!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

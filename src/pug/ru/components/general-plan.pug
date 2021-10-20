@@ -1,0 +1,99 @@
+section.plan
+  span.ancor#generalplan
+  .title-wrap
+    h2.plan__title.title
+      span.head-line Общий
+      |  план
+  .plan-bg
+    .container
+      .row
+        aside.plan__legend.legend-areas
+          h3 Условные обозначения
+          ol
+            li
+              .legend__icon
+                span.icon-number 1
+                +svg('pin')
+              span.legend__text Парковка
+            li
+              .legend__icon
+                span.icon-number 2
+                +svg('pin')
+              span.legend__text Фитнес центр
+            li
+              .legend__icon
+                span.icon-number 3
+                +svg('pin')
+              span.legend__text Торговый центр
+            li
+              .legend__icon
+                span.icon-number 4
+                +svg('pin')
+              span.legend__text Медицинский центр
+            li
+              .legend__icon
+                span.icon-number 5
+                +svg('pin')
+              span.legend__text Парк <span class="legend__text--uppercase">Terrase</span>
+            li
+              .legend__icon
+                span.icon-number 6
+                +svg('pin')
+              span.legend__text Террасы
+        .plan__visual
+          .plan-visual__img
+            img(src="../img/general-plan-bg.jpg" alt="План жилого комплекса")
+            ol.legend__location
+              li
+                .legend__icon
+                  span.icon-number 1
+                  +svg('pin')
+              li
+                .legend__icon
+                  span.icon-number 2
+                  +svg('pin')
+              li
+                .legend__icon
+                  span.icon-number 3
+                  +svg('pin')
+              li
+                .legend__icon
+                  span.icon-number 4
+                  +svg('pin')
+              li
+                .legend__icon
+                  span.icon-number 5
+                  +svg('pin')
+              li
+                .legend__icon
+                  span.icon-number 6
+                  +svg('pin')
+              li
+                .legend__icon
+                  span.icon-number 6
+                  +svg('pin')
+              li
+                .legend__icon
+                  span.icon-number 6
+                  +svg('pin')
+            span.street-left улица Подольская
+            span.street-right улица Свободы
+            ul.queue
+              li I
+              li II
+              li III
+        aside.plan__legend.legend-queue
+          h3 Очередь
+          ul.legend__queue
+            li
+              span.legend__text
+                span.queue-number I
+                | - первая очередь
+            li
+              span.legend__text
+                span.queue-number II
+                | - вторая очередь
+            li
+              span.legend__text
+                span.queue-number III
+                | - третья очередь

@@ -1,0 +1,27 @@
+{
+  "name": "preprocessor",
+  "version": "1.0.0",
+  "description": "vvpalchin_template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Hello World\" && exit 1"
+  },
+  "author": "DrDramen",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cache": "^1.1.3",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify-es": "^2.0.0"
+  }
+}

@@ -1,0 +1,128 @@
+.contacts
+  .contacts-wrapper
+    max-width: 1047px
+    margin: 0 auto
+    padding-top: 25px
+    +media(1024)
+      padding-top: 50px
+
+.contacts__title
+  margin-bottom: 30px
+
+.contacts__items
+  display: flex
+  flex-direction: column
+  font: 400 1.8rem 'Roboto', Arial, sans-serif
+  +media(1024)
+    flex-direction: row
+
+.contacts__item
+  // flex: 1 1 100%
+  // max-width: 100%
+  +media(1024)
+    flex: 1 1 50%
+    max-width: 50%
+
+.contacts-info__items
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  +media(578.9)
+    flex-direction: row
+  +media(1024)
+    flex-direction: column
+
+.contacts-info__item
+  flex-basis: 50%
+  margin-bottom: 27px
+  text-align: center
+  +media(578.9)
+    text-align: left
+  +media(1024)
+    flex-basis: auto
+  h4
+    margin-bottom: 13px
+    font: 500 1.8rem 'Roboto Slab', Arial, serif
+    +media(768)
+      font-size: 2.4rem
+
+.contacts-info__phones
+  +media(578.9)
+    align-items: flex-start
+  .phone-link
+    font: inherit
+
+.contacts-info__email
+  svg
+    width: 28px
+    height: 21px
+
+.contacts-info__address
+  display: flex
+  justify-content: center
+  +media(578.9)
+    justify-content: flex-start
+  .address-text
+    position: relative
+    padding-left: 27px
+    svg
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      // bottom: 0
+      width: 17px
+      height: 23px
+      margin: auto 0
+  .text-wrap
+    display: flex
+    flex-direction: column
+    text-align: left
+    +media(768)
+      display: block
+
+.contacts-info__working-hours
+  display: flex
+  flex-direction: column
+  align-items: center
+  +media(578.9)
+    align-items: flex-start
+  .working-hours-wrap
+    text-align: left
+  p
+    position: relative
+    padding-left: 27px
+    svg
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      width: 18px
+      height: 17px
+      margin: auto 0
+      fill: $maincolor
+
+.contacts-map
+  display: flex
+  flex-direction: column
+  +media(1024)
+    min-height: auto
+  &__title
+    font: 500 2.4rem 'Roboto Slab', Arial, serif
+    text-align: center
+    margin-bottom: 20px
+    +media(578.9)
+
+  &__img
+    flex-grow: 1
+    padding: 10px 15px
+    border: 2px solid #333
+    overflow: hidden
+    +media(1024)
+      margin-bottom: 30px
+    iframe
+      width: 100%
+      height: 400px
+      +media(1024)
+        height: 100%
