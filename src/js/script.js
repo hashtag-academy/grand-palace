@@ -202,7 +202,7 @@ if (floorList) {
   };
 
   const transitionOff = function (target) {
-    // target.style.transition = "none";
+    target.style.transition = "none";
   };
 
   const next = function () {
