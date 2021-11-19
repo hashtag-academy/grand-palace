@@ -1,0 +1,37 @@
+header.header
+  .container
+    .header-info__items
+      .header-info__item.menu__icon
+        .icon__menu <!--open-->
+          span
+      .header-info__item.header__phone.phone-list
+        a.phone-link(href='tel:+380670098700')
+          +svg('phone')
+          |(067)&nbsp;00-98-700
+      .header-info__item.header__logo
+        a.menu__logo(href='./')
+          img(src='../img/logo-grand-palace.svg' alt='Grand Palace - жилой комплекс')
+      .header-info__item.header__social.social-list
+        a.social-link(href='https://www.facebook.com/GrandPalace.km' target="_blank")
+          +svg('fb', 31, 31)
+        a.social-link(href='https://www.instagram.com/grand_palace_km/' target="_blank")
+          object(class='icon' type='image/svg+xml' data='../img/instagram.svg' width='31' height='31')
+      .header-info__item.header__lng-toggle
+        a(href='#' data-lang="uk") Укр
+        a.active(href='#' data-lang="ru") Рус
+    nav.header__menu
+      ul.menu__list
+        li
+          a.menu__link(href='residential.html') Жилая недвижимость
+        li
+          a.menu__link(href='commercial.html') Коммерческая недвижимость
+        li
+          a.menu__link(href= location + "#generalplan") Общий план
+        li
+          a.menu__link(href= location + "#overview") Преимущества
+        li
+          a.menu__link(href= location + "#progress") Ход строительства
+        li
+          a.menu__link(href= location + "#documentation") Документация
+        li
+          a.menu__link(href='contacts.html') Контакты

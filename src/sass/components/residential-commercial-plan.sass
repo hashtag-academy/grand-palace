@@ -1,0 +1,175 @@
+.residential-plan, .commercial-plan
+  .short-description
+    margin-bottom: 45px
+    font-size: 1.8rem
+    text-align: center
+    +media(769)
+      font-size: 2.4rem
+  .residential-plan__title, .commercial-plan__title
+    .head-line:after
+      width: 52%
+
+.plan-nav
+  font: 500 1.8rem 'Roboto Slab', Arial, serif
+  text-transform: uppercase
+.plan-nav__header
+  margin-bottom: 50px
+  +media(1025)
+    margin-bottom: 100px
+
+.filter__items, .filter__item
+  display: flex
+  align-items: center
+  justify-content: space-around
+
+.filter__items
+  +media(540)
+    justify-content: space-between
+
+.filter__item
+  flex-direction: column
+  flex: 0 1 33.3333%
+  +media(768)
+    flex-direction: row
+    padding: 0 30px
+
+.filter__title
+  font-size: 1.8rem
+  +media(769)
+    margin-right: 50px
+    font-size: 2.4rem
+.filter-queue__items
+  position: relative
+  display: flex
+  .exploitation
+    position: absolute
+    top: calc(100% + 10px)
+    left: 50%
+    display: none
+    padding: 6px 8px
+    color: #fff
+    font: 400 1.2rem 'Roboto', Arial, sans-serif
+    white-space: nowrap
+    text-transform: lowercase
+    background-color: $maincolor
+    transform: translateX(-50%)
+  input[data-exploitation]:checked ~ .exploitation
+    display: block
+
+.filter-queue__items > input
+  position: absolute
+  margin: 0
+  appearance: none
+  width: 0
+  height: 0
+  opacity: 0
+  visibility: hidden
+
+.filter-queue__item
+  display: block
+  width: 35px
+  height: 25px
+  text-align: center
+  border: 3px solid $maincolor
+  box-sizing: content-box
+  cursor: pointer
+
+.filter-queue__item ~ .filter-queue__item
+  border-left: none
+
+.filter-queue__items
+  input:checked + .filter-queue__item
+    color: #fff
+    background-color: $maincolor
+
+.plan-nav__title
+  text-align: center
+
+.plan-nav__title
+  margin-bottom: 40px
+  font-size: 2.4rem
+  color: $maincolor
+  +media(768)
+    font-size: 3rem
+
+.plan-nav__img
+  position: relative
+  .img
+    scroll-behavior: smooth
+    display: flex
+    flex-wrap: nowrap
+    overflow: hidden
+    margin: 0 auto 80px
+    width: 80% // 38% и меньше
+    text-align: center
+    +media(540)
+      margin: 0 auto 40px
+    +media(770)
+      width: 50%
+  .slide 
+    min-width: 100%
+  .btn-arrow
+    position: absolute
+    bottom: -60px
+    padding: 6px 0
+    width: 140px
+    font-size: 1.4rem
+    & + .btn-arrow
+      margin: 0
+    &:hover
+      padding: 6px 0
+    +media(540)
+      padding: 11px 0
+      top: -80px
+      bottom: auto
+      &:hover
+        padding: 11px 0
+    +media(768)
+      font-size: 1.8rem
+      width: 226px
+    +media(1025)
+      top: 50%
+      transform: translateY(-50%)
+      &:hover
+        transform: translateY(-50%)
+    span
+      position: relative
+      svg
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        margin: auto 0
+        width: 25px
+        height: 15px
+        +media(768)
+          width: 32px
+  .btn-arrow-prev
+    left: 0
+    span
+      padding-left: 40px
+      +media(768)
+        padding-left: 55px
+      svg
+        left: 0
+  .btn-arrow-next
+    right: 0
+    span
+      padding-right: 40px
+      +media(768)
+        padding-right: 55px
+
+.plan-nav__info
+  display: flex
+  // flex-direction: column
+  justify-content: center
+  font-size: 1.8rem
+  +media(768)
+    font-size: 2.4rem
+
+.info-wrap
+  display: flex
+  flex-direction: column
+
+.info-sold__list, .info-for-sale__list
+  color: $maincolor

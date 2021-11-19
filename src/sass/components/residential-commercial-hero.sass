@@ -1,0 +1,23 @@
+.hero
+  &.hero-residential, &.hero-commercial
+    position: relative
+    padding-top: 7.25%
+    padding-bottom: 7.25%
+    &::before
+      content: none
+    .tagline
+      // position: absolute
+      // top: 50%
+      // left: 0
+      display: inline-block
+      padding: 8% 4.40956%
+      color: $fontColorSecond
+      text-align: center
+      background-color: rgba(13, 27, 41, .55)
+      // transform: translateY(-50%)
+  &.hero-residential
+    background-image: url(../img/hero-residential.jpg)
+    background-position: center 77%;
+  &.hero-commercial
+    background-image: url(../img/hero-commercial.jpg)
+    background-position: center 69%;

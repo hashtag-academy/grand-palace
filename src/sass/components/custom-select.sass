@@ -1,0 +1,115 @@
+.custom-select
+  position: relative
+  width: 80px
+  // margin-right: 1rem
+  font-family: "Roboto Slab"
+  line-height: 1.2
+  font-weight: 500
+  transition: .3s ease
+
+.custom-select[open]
+  z-index: 1
+
+.radio-items
+  padding: .2rem
+  cursor: pointer
+  // border-radius: 5px
+  // background-color: #ddd
+  border: 3px solid $maincolor
+  list-style: none
+
+.radio-items::-webkit-details-marker
+  display: none
+
+.custom-select[open] .radio-items:before
+  content: ''
+  display: block
+  width: 100vw
+  height: 100vh
+  background: transparent
+  position: fixed
+  top: 0
+  left: 0
+
+.radio-items:after
+  content: ''
+  position: absolute
+  top: 0
+  right: 10px
+  bottom: 0
+  margin: auto 0
+  display: inline-block
+  width: 0
+  height: 0
+  border-left: 12px solid transparent
+  border-right: 12px solid transparent
+  border-top: 12px solid $maincolor
+  // border-bottom-left-radius: 2px
+  // transform: rotate(45deg) translate(50%, 0%)
+  transform-origin: center center
+  transition: transform ease-in-out 100ms
+
+.radio-items:focus
+  outline: none
+
+.custom-select[open] .radio-items:after
+  transform: rotateX(-180deg)
+
+.list-items
+  width: 100%
+  background-color: #f3ece2
+  position: absolute
+  top: calc(100% - .3rem)
+  left: 0
+  padding: 7px
+  margin: 0
+  box-sizing: border-box
+  max-height: 250px
+  border: 3px solid $maincolor
+  overflow-y: auto
+  // scrollbar hide
+  -ms-overflow-style: none
+  scrollbar-width: none
+  transition: .3s ease
+  &::-webkit-scrollbar
+    width: 0px
+    background: transparent
+  // scrollbar hide
+
+.list-item
+  margin: 0
+  padding: 2px 0
+
+  &:first-child
+    padding-top: 0
+  &:last-child
+    padding-bottom: 0
+    border-bottom: none
+
+/* FAKE SELECT */
+
+.radio-items
+  counter-reset: radios
+
+.radio-item
+  counter-increment: radios
+  appearance: none
+  display: none
+
+.radio-item:checked
+  display: inline
+
+.radio-item:after
+  content: attr(title)
+  display: inline
+  font: 500 1.8rem/1.2 "Roboto Slab"
+
+.list-items
+  counter-reset: labels
+
+.list-item label
+  width: 100%
+  display: block
+  cursor: pointer
+  &:hover
+    color: $maincolor

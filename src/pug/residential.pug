@@ -1,0 +1,25 @@
+doctype html
+html(lang="uk")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Grand Palace - жилая недвижимость в городе Хмельницкий
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  link(rel="stylesheet" href="css/main.css")
+  body(tabindex="0")
+    .body-wrapper
+      include components/vars
+        - var location = "/"
+      include components/mixins
+      include components/header
+      main.main
+        include components/residential-hero
+        include components/residential-overview
+        include components/residential-advantages
+        include components/residential-plan
+
+      include components/footer
+    script(src="js/scripts.js" defer)

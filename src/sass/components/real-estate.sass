@@ -1,0 +1,96 @@
+
+.real-estate
+  padding: 25px 0
+  +media(1024)
+    padding: 50px 0
+  article:not(:last-child)
+    margin-bottom: 25px
+    .short-description, .images-slider__items
+      margin-bottom: 25px
+    +media(1024)
+      margin-bottom: 50px
+      .short-description, .images-slider__items
+        margin-bottom: 50px
+  article:last-child
+    .images-slider__items
+      margin-bottom: 25px
+      +media(1024)
+        margin-bottom: 0
+  .short-description
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    min-width: 100%
+    text-align: center
+    align-items: center
+    +media(540)
+      align-items: normal
+      text-align: left
+    +media(1024)
+      min-width: auto
+  .short-description__title
+    margin-bottom: 25px
+    +media(540)
+      align-self: flex-start
+    +media(1024)
+      margin-bottom: 43px
+  .short-description__text
+    margin-bottom: 11px
+    line-height: 1.5
+    &:last-of-type
+      margin-bottom: 25px
+      +media(1024)
+        margin-bottom: 45px
+    +media(1024)
+      padding-right: 35px
+  .short-description__btn
+    padding: 10px 56px 13px
+    +media(540)
+      align-self: flex-start
+  .images-slider__items
+    display: flex
+    justify-content: space-between
+    min-height: 250px
+    min-width: 100%
+    +media(1024)
+      min-width: auto
+    .images-slider__item
+      flex: 0 1 6%
+      max-width: 6%
+      cursor: pointer
+      transition: .5s ease
+      &.active
+        flex-basis: 65%
+        max-width: 65%
+
+.real-estate__residential
+  .short-description
+    order: 1
+    +media(1024)
+      order: 0
+  .slider-item-
+    &1
+      background: $bg url(../img/residential-slider-1.jpg) center/cover no-repeat
+    &2
+      background: $bg url(../img/residential-slider-2.jpg) center/cover no-repeat
+    &3
+      background: $bg url(../img/residential-slider-3.jpg) center/cover no-repeat
+    &4
+      background: $bg url(../img/residential-slider-4.jpg) center/cover no-repeat
+    &5
+      background: $bg url(../img/residential-slider-5.jpg) center/cover no-repeat
+
+.real-estate__commercial
+  .short-description
+    order: 1
+  .slider-item-
+    &1
+      background: $bg url(../img/commercial-slider-1.jpg) center/cover no-repeat
+    &2
+      background: $bg url(../img/commercial-slider-2.jpg) center/cover no-repeat
+    &3
+      background: $bg url(../img/commercial-slider-3.jpg) center/cover no-repeat
+    &4
+      background: $bg url(../img/commercial-slider-4.jpg) center/cover no-repeat
+    &5
+      background: $bg url(../img/commercial-slider-5.jpg) center/cover no-repeat

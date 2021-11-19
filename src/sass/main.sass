@@ -1,0 +1,169 @@
+@import components/vars
+@import components/mixins
+
+*, *::before, *::after
+  box-sizing: border-box
+
+html
+  height: 100%
+  font-size: 10px
+body
+  margin: 0
+  height: 100%
+  font: 400 $fTextFirst Roboto, Arial, sans-serif
+  line-height: 1.15
+  color: $fontColorFirst
+  background-color: $bg
+  &.lock
+    overflow: hidden
+a
+  color: inherit
+  text-decoration: none
+  cursor: pointer
+ul, ol
+  margin: 0
+  padding: 0
+  list-style: none
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  font-weight: inherit
+  font-size: inherit
+p
+  margin: 0
+
+sup
+  font-size: 0.65em
+
+img, svg, object
+  vertical-align: bottom
+
+img
+  width: 100%
+
+main
+  & > section + section
+    padding: 25px 0
+  & > section:first-child, > section:last-child
+    margin-bottom: 25px
+  +media(1024)
+    & > section + section
+      padding: 50px 0
+    & > section:first-child, > section:last-child
+      margin-bottom: 50px
+
+figure
+  margin: 0
+
+
+.body-wrapper
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+.main
+  flex: 1 1 auto
+.container
+  max-width: 90vw
+  margin: 0 auto
+
+.row
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -1.5%
+
+.col
+  flex: 1 0 50%
+  max-width: 50%
+  padding-left: 1.5%
+  padding-right: 1.5%
+  &-20
+    flex: 1 1 20%
+    max-width: 20%
+
+
+.title-wrap
+  text-align: center
+  margin-bottom: 25px
+  +media(1024)
+    margin-bottom: 50px
+
+.title
+  position: relative
+  display: inline-block
+  padding: 0 0 5px
+  font: 500 1.8rem 'Roboto Slab', Arial, serif
+  text-transform: uppercase
+  +media(370)
+    font-size: 2rem
+  +media(1024)
+    padding: 0 0 9px
+    font-size: $fTitleFirst
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: $maincolor
+  .head-line
+    position: relative
+    display: inline-block
+    padding-top: 5px
+    +media(1024)
+      padding-top: 9px
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 110%
+      height: 1px
+      background-color: $maincolor
+  &--one-word
+    // &::after
+    //   width: 110%
+    .head-line
+      &::after
+        width: 50%
+
+.btn
+  display: inline-block
+  font-family: 'Roboto Slab', Arial, serif
+  color: $fontColorSecond
+  text-transform: uppercase
+  background-color: $maincolor
+  cursor: pointer
+  transition: .5s ease
+  &:hover
+    transform: scale(1.02)
+    box-shadow: 0 5px 5px 2.5px rgba(67,4,4,0.2)
+
+.ancor
+  position: relative
+  top: -124.46875px
+  left: 0
+  +media(1024)
+    top: -173.625px
+
+@import components/sprite
+@import components/custom-select
+@import components/header
+@import components/hero
+@import components/residential-commercial-hero
+@import components/real-estate
+@import components/residential-commercial-overview
+@import components/residential-commercial-advantages
+@import components/residential-commercial-plan
+@import components/general-plan
+@import components/overview
+@import components/panorama
+@import components/construction-progress
+@import components/documentation
+@import components/contact-section
+@import components/footer
+
+// @media screen and ( orientation: landscape)
+//   .header.menu-ctive
+//     .header__menu
+//       height: 50vh

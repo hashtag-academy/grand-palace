@@ -1,0 +1,53 @@
+section.residential-plan
+  .container
+    .title-wrap
+      h2.residential-plan__title.title
+        span.head-line План квартири
+    .plan-residential
+      p.short-description Перегляньте повне планування житлового комплексу та підберіть для себе квартиру залежно від поверху, кімнатності, квадратури та ціни.
+      .plan-nav
+        .plan-nav__header
+          form.filter(action="" method="post")
+            .filter__items
+              .filter__queue.filter__item
+                p.filter__title Черга
+                .filter-queue__items
+                  input(id="queue1" type="radio" name="queue" value="1" data-exploitation = true)
+                  label.filter-queue__item(for="queue1") 1
+                  input(id="queue2" type="radio" name="queue" value="2" checked data-exploitation = false)
+                  label.filter-queue__item(for="queue2") 2
+                  input(id="queue3" type="radio" name="queue" value="3" data-exploitation = false)
+                  label.filter-queue__item(for="queue3") 3
+                  p.exploitation введено в експлуатацію
+              .filter__floor.filter__item
+                p.filter__title Поверх
+                details.custom-select
+                  summary.radio-items
+                    - var n = 2
+                    while n <= 18
+                      input.radio-item(type="radio" name="floor" id="floor1" title="1" value="1" checked)
+                      input.radio-item(type="radio" name="floor" id="floor"+n title=n value=n++)
+                  ul.list-items
+                    - var k = 1
+                    while k <= 18
+                      li.list-item
+                        label(for="floor"+k)= k++
+        .plan-nav__title
+          h3 II черга
+        .plan-nav__img
+          .img
+            img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+          .btn.btn-arrow.btn-arrow-prev
+            span I черга
+              +svg('arrow')
+          .btn.btn-arrow.btn-arrow-next
+            span III черга
+              +svg('arrow')
+        .plan-nav__info
+          .info-wrap
+            p.info-sold
+              span.info-sold__title Продано -&nbsp;
+              span.info-sold__list 1a, 1e
+            p.info-for-sale
+              span.info-for-sale__title Доступно для продажу -&nbsp;
+              span.info-for-sale__list 1c, 1d, 1b

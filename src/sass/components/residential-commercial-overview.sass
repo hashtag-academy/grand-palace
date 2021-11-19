@@ -1,0 +1,52 @@
+.real-estate
+  &.residential-overview, &.commercial-overview
+    .short-description
+      justify-content: center
+      +media(1024)
+        padding-left: 0
+    .head-line
+      &::after
+        width: 60%
+        +media(1024)
+          width: 100%
+        +media(1680)
+          width: 60%
+    .short-description__title
+      +media(1024)
+        margin-bottom: 48px
+    .short-description__text
+      padding-right: 0
+      font-size: 1.8rem
+      line-height: 1.2
+      // text-align: left
+      &:last-of-type
+        margin-bottom: 0
+      +media(1360)
+        font-size: 2.4rem
+
+    .image-wrapper
+      flex: 1 0 100%
+      max-width: 100%
+      margin-bottom: 25px
+      padding: 0 1.5%
+      +media(1024)
+        flex: 1 0 50%
+        max-width: 50%
+        margin-bottom: 0
+        padding: 0 5.6% 0 1.5%
+
+    .residential-overview__img
+      height: 250px
+      +media(1024)
+        height: 420px
+        min-height: 100%
+      img
+        height: 100%
+        object-fit: cover
+        object-position: 0 85%
+        +media(1024)
+          object-position: right 85%
+
+  &.commercial-overview
+    .short-description
+      justify-content: start

@@ -1,0 +1,53 @@
+section.commercial-plan
+  .container
+    .title-wrap
+      h2.commercial-plan__title.title
+        span.head-line план коммерческого помещения
+    .plan
+      p.short-description Просмотрите планировки жилого комплекса и подберите для себя помещения в зависимости от этажа, квадратуры и цены.
+      .plan-nav
+        .plan-nav__header
+          form.filter(action="")
+            .filter__items
+              .filter__queue.filter__item
+                p.filter__title Очередь
+                .filter-queue__items
+                  input(id="queue1" type="radio" name="queue" value="1" data-exploitation = true)
+                  label.filter-queue__item(for="queue1") 1
+                  input(id="queue2" type="radio" name="queue" value="2" checked data-exploitation = false)
+                  label.filter-queue__item(for="queue2") 2
+                  input(id="queue3" type="radio" name="queue" value="3" data-exploitation = false)
+                  label.filter-queue__item(for="queue3") 3
+                  p.exploitation введено в эксплуатацию
+              .filter__floor.filter__item
+                p.filter__title Этаж
+                details.custom-select
+                  summary.radio-items
+                    - var n = 2
+                    input.radio-item(type="radio" name="floor" id="floor1" title="1" value="1" checked)
+                    while n <= 18
+                      input.radio-item(type="radio" name="floor" id="floor"+n title=n value=n++)
+                  ul.list-items
+                    - var k = 1
+                    while k <= 18
+                      li.list-item
+                        label(for="floor"+k)= k++
+        .plan-nav__title
+          h3 II очередь
+        .plan-nav__img
+          .img
+            img(src="../img/residential-plan.jpg" alt="Grand Palace - план жилого этажа")
+          .btn.btn-arrow.btn-arrow-prev
+            span I очередь
+              +svg('arrow')
+          .btn.btn-arrow.btn-arrow-next
+            span III очередь
+              +svg('arrow')
+        .plan-nav__info
+          .info-wrap
+            p.info-sold
+              span.info-sold__title Продано -&nbsp;
+              span.info-sold__list 1a, 1e
+            p.info-for-sale
+              span.info-for-sale__title Доступно для&nbspпродажи&nbsp-&nbsp;
+              span.info-for-sale__list 1c, 1d, 1b

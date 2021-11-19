@@ -1,0 +1,84 @@
+.footer
+  // display: none
+  color: $fontColorFooter
+  background: $bg url(../img/footer-bg.jpg) center/cover no-repeat
+  .container
+    +media(1280)
+      max-width: 100vw;
+.footer-info
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  padding: 40px 0 0 0
+  font: 500 $fTextFirst 'Roboto Slab', Arial, serif
+  +media(1024)
+    justify-content: space-between
+
+.info-item
+  margin-bottom: 25px
+  +media(1024)
+    margin-bottom: 0
+
+.footer-media, .footer__phone
+  flex: 1 1 0%
+  // margin-bottom: 25px
+  text-align: center
+
+.footer__phone
+  .phone-link
+    padding: 5px 10px 4px 40px
+    svg
+      left: 10px
+    +media(1024)
+      padding: 5px 0 4px 30px
+      svg
+        left: 0
+  +media(409)
+    flex-direction: row
+    justify-content: center
+  +media(620)
+    flex-direction: column
+    margin-bottom: 0
+  +media(780)
+    flex-direction: row
+  +media(1024)
+    flex-direction: column
+
+.footer-media
+  order: 1
+  margin-bottom: 0
+  +media(1280)
+    order: 0
+
+.footer__email
+  margin-bottom: 15px
+
+.email-link
+  svg
+    margin-right: 15px
+
+.footer-address
+  flex-basis: 245px
+  .footer-address__wrap
+    position: relative
+    padding-left: 45px
+  +media(409)
+    flex-basis: 100%
+    display: flex
+    justify-content: center
+  +media(1024)
+    flex-basis: auto
+  svg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto 0
+
+.copyright
+  padding: 45px 0 25px
+  text-align: center
+  +media(540)
+    padding: 45px 0
