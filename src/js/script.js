@@ -198,11 +198,11 @@ if (floorList) {
   const transitionDuration = 0.75;
 
   const transitionOn = function (target, duration) {
-    target.style.transition = `${duration}s ease`;
+    // target.style.transition = `${duration}s ease`;
   };
 
   const transitionOff = function (target) {
-    target.style.transition = "none";
+    // target.style.transition = "none";
   };
 
   const next = function () {

@@ -7,7 +7,7 @@ let rc_btn_prev = document.querySelector(".btn-arrow-prev"),
     scrollWidth = rc_slides[1].getBoundingClientRect().width,
     navigationButtons = document.querySelectorAll(".filter-queue__items input"),
     currentSlideBtn = document.querySelector(".currentSlideBtn"),
-    currentSlide = document.querySelector(".currentSlide");
+    currentSlide;
 
 for(let i = 0; i < rc_slides.length; i++){    // set data attribute with order numbers of each picture
   navigationButtons[i].dataset.orderNumber = i;
@@ -17,6 +17,8 @@ for(let i = 0; i < rc_slides.length; i++){    // set data attribute with order n
 rc_slider_line.scroll(rc_slider_line.scrollLeft+=scrollWidth*currentSlideBtn.getAttribute("data-order-number"), 0);
 rc_slides[currentSlideBtn.getAttribute("data-order-number")].classList.add("currentSlide");
 
+currentSlide = document.querySelector(".currentSlide");
+
 navigationButtons.forEach(e => {
   e.onclick = goToSlide;
 });
@@ -24,14 +26,30 @@ navigationButtons.forEach(e => {
 rc_btn_next.onclick = goToNextSlide;      // call function to move to next slide
 rc_btn_prev.onclick = goToPrevSlide;      // call function to move to prev slide
 
+function getSlideArr (arr){
+  for(let i = 0; i < arr.length; i++){
+    arr[i] == arr[i];
+  }
+  return arr;
+}
+
 function goToNextSlide (event){
   event.preventDefault();
-  // currentSlide.classList.remove(".currentSlide");
+  rc_slides = Array.from(rc_slides);
+  let currentSlideNumber =  rc_slides.indexOf(currentSlide);
+  currentSlide.classList.remove("currentSlide");
+  rc_slides[currentSlideNumber+1].classList.add("currentSlide");
+  currentSlide = document.querySelector(".currentSlide");
   rc_slider_line.scroll(rc_slider_line.scrollLeft+=scrollWidth, 0);
 }
 
 function goToPrevSlide (event){
   event.preventDefault();
+  rc_slides = Array.from(rc_slides);
+  let currentSlideNumber =  rc_slides.indexOf(currentSlide);
+  currentSlide.classList.remove("currentSlide");
+  rc_slides[currentSlideNumber-1].classList.add("currentSlide");
+  currentSlide = document.querySelector(".currentSlide");
   rc_slider_line.scroll(rc_slider_line.scrollLeft-scrollWidth, 0);
 }
 
