@@ -35,34 +35,52 @@ function getSlideArr (arr){
 
 function goToNextSlide (event){
   event.preventDefault();
+
   rc_slides = Array.from(rc_slides);
   let currentSlideNumber =  rc_slides.indexOf(currentSlide);
   currentSlide.classList.remove("currentSlide");
   rc_slides[currentSlideNumber+1].classList.add("currentSlide");
   currentSlide = document.querySelector(".currentSlide");
+
+  navigationButtons = Array.from(navigationButtons);
+  let currentButtonNumber =  navigationButtons.indexOf(currentSlideBtn);
+  currentSlideBtn.classList.remove("currentSlideBtn");
+  navigationButtons[currentButtonNumber+1].classList.add("currentSlideBtn");
+  currentSlideBtn = document.querySelector(".currentSlideBtn");
+
   rc_slider_line.scroll(rc_slider_line.scrollLeft+=scrollWidth, 0);
 }
 
 function goToPrevSlide (event){
   event.preventDefault();
+
   rc_slides = Array.from(rc_slides);
   let currentSlideNumber =  rc_slides.indexOf(currentSlide);
   currentSlide.classList.remove("currentSlide");
   rc_slides[currentSlideNumber-1].classList.add("currentSlide");
   currentSlide = document.querySelector(".currentSlide");
+
+  navigationButtons = Array.from(navigationButtons);
+  let currentButtonNumber =  navigationButtons.indexOf(currentSlideBtn);
+  currentSlideBtn.classList.remove("currentSlideBtn");
+  navigationButtons[currentButtonNumber-1].classList.add("currentSlideBtn");
+  currentSlideBtn = document.querySelector(".currentSlideBtn");
+
   rc_slider_line.scroll(rc_slider_line.scrollLeft-scrollWidth, 0);
 }
 
 function goToSlide (event){
   event.preventDefault();
-  currentSlideBtn.classList.remove("currentSlidebtn");
+  currentSlideBtn.classList.remove("currentSlideBtn");
   event.target.classList.add("currentSlideBtn");
 
   currentSlideBtn = document.querySelector(".currentSlideBtn");
-  
-  if(currentSlideBtn.getAttribute("data-order-number") >= img){
-    rc_slider_line.scroll(rc_slider_line.scrollLeft+=scrollWidth*currentSlideBtn.getAttribute("data-order-number"), 0);
-  }
+  navigationButtons = Array.from(navigationButtons);
+  rc_slides = Array.from(rc_slides);
+  currentSlide.classList.remove("currentSlide");
+  rc_slides[navigationButtons.indexOf(currentSlideBtn)].classList.add("currentSlide");
 
+  rc_slider_line.scroll(rc_slider_line.scrollLeft=scrollWidth*navigationButtons.indexOf(currentSlideBtn), 0);
+
+  currentSlide = document.querySelector(".currentSlide");
 }
-
