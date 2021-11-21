@@ -82,26 +82,30 @@ function goToSlide (event){
   rc_slides[navigationButtons.indexOf(currentSlideBtn)].classList.add("currentSlide");
   currentSlide = document.querySelector(".currentSlide");
 
+  buttonHide();
+
   rc_slider_line.scroll(rc_slider_line.scrollLeft=scrollWidth*navigationButtons.indexOf(currentSlideBtn), 0);    //slider scroll
 }
 
-function buttonHide (event){
+function buttonHide (){
   let btn_prev_text = rc_btn_prev.querySelector("span span"),
       btn_next_text = rc_btn_next.querySelector("span span"),
       order_name = document.querySelector(".plan-nav__title h3");
   if (rc_slides.indexOf(currentSlide) == 1) {
     rc_btn_prev.style.visibility = "visible";
     rc_btn_next.style.visibility = "visible";
-
+    
     order_name.innerText = `II черга`;
     btn_prev_text.innerText = `I черга`;
     btn_next_text.innerText = `III черга`;
   } else if (rc_slides.indexOf(currentSlide) == 0){
     order_name.innerText = `I черга`;
     rc_btn_prev.style.visibility = "hidden";
+    rc_btn_next.style.visibility = "visible";
     btn_next_text.innerText = `II черга`;
   } else if (rc_slides.indexOf(currentSlide) == 2){
     order_name.innerText = `III черга`;
+    rc_btn_prev.style.visibility = "visible";
     rc_btn_next.style.visibility = "hidden";
     btn_prev_text.innerText = `II черга`;
   }
