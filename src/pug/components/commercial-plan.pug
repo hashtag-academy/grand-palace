@@ -24,9 +24,9 @@ section.commercial-plan
                 details.custom-select
                   summary.radio-items
                     - var n = 2
-                    input.radio-item(type="radio" name="floor" id="floor1" title="1" value="1" checked)
+                    input.radio-item.js-floor(type="radio" name="floor" id="floor1" title="1" value="1" checked)
                     while n <= 18
-                      input.radio-item(type="radio" name="floor" id="floor"+n title=n value=n++)
+                      input.radio-item.js-floor(type="radio" name="floor" id="floor"+n title=n value=n++)
                   ul.list-items
                     - var k = 1
                     while k <= 18
@@ -44,10 +44,12 @@ section.commercial-plan
               .slide
                 img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
           .btn.btn-arrow.btn-arrow-prev
-            span I черга
+            span 
+              span I черга
               +svg('arrow')
           .btn.btn-arrow.btn-arrow-next
-            span III черга
+            span 
+              span III черга
               +svg('arrow')
         .plan-nav__info
           .info-wrap

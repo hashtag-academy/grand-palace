@@ -198,11 +198,11 @@ if (floorList) {
   const transitionDuration = 0.75;
 
   const transitionOn = function (target, duration) {
-    // target.style.transition = `${duration}s ease`;
+    //cn target.style.transition = `${duration}s ease`;
   };
 
   const transitionOff = function (target) {
-    // target.style.transition = "none";
+    //cn target.style.transition = "none";
   };
 
   const next = function () {
@@ -330,7 +330,7 @@ if (floorList) {
 
   window.onresize = () => {
     if (window.matchMedia("(max-width: 540px)").matches) {
-      initMobile();
+      // initMobile();
     } else {
       endMobile();
     }
