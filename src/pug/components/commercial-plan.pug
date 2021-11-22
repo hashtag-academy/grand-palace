@@ -25,17 +25,17 @@ section.commercial-plan
                   summary.radio-items
                     - var n = 2
                     input.radio-item.js-floor(type="radio" name="floor" id="floor1" title="1" value="1" checked)
-                    while n <= 18
+                    while n <= 4
                       input.radio-item.js-floor(type="radio" name="floor" id="floor"+n title=n value=n++)
                   ul.list-items
                     - var k = 1
-                    while k <= 18
+                    while k <= 4
                       li.list-item
                         label(for="floor"+k)= k++
         .plan-nav__title
           h3 II черга
         .plan-nav__img
-          .floor
+          .floor(data-floor-number="1")
             .img.js-slider
               .slide
                 img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
@@ -43,6 +43,31 @@ section.commercial-plan
                 img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
               .slide
                 img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+          .floor(data-floor-number="2")
+            .img.js-slider
+              .slide
+                img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+              .slide
+                img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+              .slide
+                img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+          .floor(data-floor-number="3")
+            .img.js-slider
+              .slide
+                img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+              .slide
+                img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+              .slide
+                img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+          .floor(data-floor-number="4")
+            .img.js-slider
+              .slide
+                img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+              .slide
+                img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+              .slide
+                img(src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху")
+          
           .btn.btn-arrow.btn-arrow-prev
             span 
               span I черга
