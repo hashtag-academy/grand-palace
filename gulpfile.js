@@ -20,7 +20,7 @@ gulp.task("browser-sync", function () {
     },
     notify: true,
     open: true,
-    browser: "google chrome"
+    browser: "chrome"
     //port: 8080
   });
 });

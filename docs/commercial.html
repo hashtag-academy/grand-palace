@@ -128,11 +128,11 @@
                       <div class="filter__queue filter__item">
                         <p class="filter__title">Черга</p>
                         <div class="filter-queue__items">
-                          <input id="queue1" type="radio" name="queue" value="1" data-exploitation>
+                          <input id="queue1" type="radio" name="queue" value="0" data-exploitation>
                           <label class="filter-queue__item" for="queue1">1</label>
-                          <input id="queue2" type="radio" name="queue" value="2" checked>
+                          <input class="currentSlideBtn" id="queue2" type="radio" name="queue" value="1">
                           <label class="filter-queue__item" for="queue2">2</label>
-                          <input id="queue3" type="radio" name="queue" value="3">
+                          <input id="queue3" type="radio" name="queue" value="2">
                           <label class="filter-queue__item" for="queue3">3</label>
                           <p class="exploitation">введено в експлуатацію</p>
                         </div>
@@ -141,24 +141,10 @@
                         <p class="filter__title">Поверх</p>
                         <details class="custom-select">
                           <summary class="radio-items">
-                            <input class="radio-item" type="radio" name="floor" id="floor1" title="1" value="1" checked>
-                            <input class="radio-item" type="radio" name="floor" id="floor2" title="2" value="2">
-                            <input class="radio-item" type="radio" name="floor" id="floor3" title="3" value="3">
-                            <input class="radio-item" type="radio" name="floor" id="floor4" title="4" value="4">
-                            <input class="radio-item" type="radio" name="floor" id="floor5" title="5" value="5">
-                            <input class="radio-item" type="radio" name="floor" id="floor6" title="6" value="6">
-                            <input class="radio-item" type="radio" name="floor" id="floor7" title="7" value="7">
-                            <input class="radio-item" type="radio" name="floor" id="floor8" title="8" value="8">
-                            <input class="radio-item" type="radio" name="floor" id="floor9" title="9" value="9">
-                            <input class="radio-item" type="radio" name="floor" id="floor10" title="10" value="10">
-                            <input class="radio-item" type="radio" name="floor" id="floor11" title="11" value="11">
-                            <input class="radio-item" type="radio" name="floor" id="floor12" title="12" value="12">
-                            <input class="radio-item" type="radio" name="floor" id="floor13" title="13" value="13">
-                            <input class="radio-item" type="radio" name="floor" id="floor14" title="14" value="14">
-                            <input class="radio-item" type="radio" name="floor" id="floor15" title="15" value="15">
-                            <input class="radio-item" type="radio" name="floor" id="floor16" title="16" value="16">
-                            <input class="radio-item" type="radio" name="floor" id="floor17" title="17" value="17">
-                            <input class="radio-item" type="radio" name="floor" id="floor18" title="18" value="18">
+                            <input class="radio-item js-floor" type="radio" name="floor" id="floor1" title="1" value="1" checked>
+                            <input class="radio-item js-floor" type="radio" name="floor" id="floor2" title="2" value="2">
+                            <input class="radio-item js-floor" type="radio" name="floor" id="floor3" title="3" value="3">
+                            <input class="radio-item js-floor" type="radio" name="floor" id="floor4" title="4" value="4">
                           </summary>
                           <ul class="list-items">
                             <li class="list-item">
@@ -173,48 +159,6 @@
                             <li class="list-item">
                               <label for="floor4">4</label>
                             </li>
-                            <li class="list-item">
-                              <label for="floor5">5</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor6">6</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor7">7</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor8">8</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor9">9</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor10">10</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor11">11</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor12">12</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor13">13</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor14">14</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor15">15</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor16">16</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor17">17</label>
-                            </li>
-                            <li class="list-item">
-                              <label for="floor18">18</label>
-                            </li>
                           </ul>
                         </details>
                       </div>
@@ -225,14 +169,39 @@
                   <h3>II черга</h3>
                 </div>
                 <div class="plan-nav__img">
-                  <div class="img">
-                    <div class="js-slider"></div><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху">
+                  <div class="floor" data-floor-number="1">
+                    <div class="img js-slider">
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                    </div>
                   </div>
-                  <div class="btn btn-arrow btn-arrow-prev"><span>I черга
+                  <div class="floor" data-floor-number="2">
+                    <div class="img js-slider">
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                    </div>
+                  </div>
+                  <div class="floor" data-floor-number="3">
+                    <div class="img js-slider">
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                    </div>
+                  </div>
+                  <div class="floor" data-floor-number="4">
+                    <div class="img js-slider">
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                      <div class="slide"><img src="img/residential-plan.jpg" alt="Grand Palace - план житлового поверху"></div>
+                    </div>
+                  </div>
+                  <div class="btn btn-arrow btn-arrow-prev"><span> <span>I черга</span>
                             <svg class="icon-sprite icon-sprite__arrow">
                               <use xlink:href="img/sprite.svg#arrow"></use>
                             </svg></span></div>
-                  <div class="btn btn-arrow btn-arrow-next"><span>III черга
+                  <div class="btn btn-arrow btn-arrow-next"><span> <span>III черга</span>
                             <svg class="icon-sprite icon-sprite__arrow">
                               <use xlink:href="img/sprite.svg#arrow"></use>
                             </svg></span></div>

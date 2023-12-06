@@ -78,7 +78,7 @@
   border-left: none
 
 .filter-queue__items
-  input:checked + .filter-queue__item
+  .currentSlideBtn + .filter-queue__item
     color: #fff
     background-color: $maincolor
 
@@ -95,7 +95,10 @@
 .plan-nav__img
   position: relative
   .img
-    display: block
+    scroll-behavior: smooth
+    display: flex
+    flex-wrap: nowrap
+    overflow: hidden
     margin: 0 auto 80px
     width: 80% // 38% и меньше
     text-align: center
@@ -103,6 +106,8 @@
       margin: 0 auto 40px
     +media(770)
       width: 50%
+  .slide 
+    min-width: 100%
   .btn-arrow
     position: absolute
     bottom: -60px
@@ -141,7 +146,7 @@
           width: 32px
   .btn-arrow-prev
     left: 0
-    span
+    & > span
       padding-left: 40px
       +media(768)
         padding-left: 55px
@@ -149,7 +154,7 @@
         left: 0
   .btn-arrow-next
     right: 0
-    span
+    & > span
       padding-right: 40px
       +media(768)
         padding-right: 55px
